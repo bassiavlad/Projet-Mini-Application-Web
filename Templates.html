@@ -1,0 +1,47 @@
+{{define: indix}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/template.css
+    .css">
+    <title>{{.Title}}</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{.Title}}</h1>
+        {{if .Message}}
+            <p class="message">{{.Message}}</p>
+        {{end}}
+        
+        {{if .Page == "form"}}
+            <form action="/create" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class" required>
+
+                <label for="level">Level:</label>
+                <input type="number" id="level" name="level" required>
+
+                <button type="submit">Create Adventurer</button>
+            </form>
+        {{else}}
+            {{if .Adventurer}}
+                <h2>Adventurer Profile</h2>
+                <p><strong>Name:</strong> {{.Adventurer.Name}}</p>
+                <p><strong>Class:</strong> {{.Adventurer.Class}} </p>
+                <button onclick="window.location.href='/index'">Edit</button>
+                <button onclick="window.location.href='/delete'">Delete</button>
+            {{else}}
+                <p>No adventurer found.</p>
+            {{end}}
+        {{end}}
+        <img class="image" scr="../static/img/index/galanta.jpg" alt="image" />
+    </div>
+</body>
+</html>
+{{end}} 

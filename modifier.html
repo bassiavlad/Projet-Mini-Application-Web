@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier un Aventurier</title>
+    <link rel="stylesheet" href="../static/css/modifier.css">
+</head>
+<body>
+    <div class="modify-container">
+        <h1>Modifier un Aventurier</h1>
+        <form action="/modify-adventurer" method="post">
+            <label for="adventurerId">ID de l'Aventurier à Modifier:</label>
+            <input type="text" id="adventurerId" name="adventurerId" required>
+
+            <label for="name">Nouveau Nom:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="class">Nouvelle Classe:</label>
+            <input type="text" id="class" name="class">
+
+            <label for="level">Nouveau age:</label>
+            <input type="number" id="level" name="level">
+
+            <label for="level">Nouveau genre:</label>
+            <input type="number" id="level" name="level">
+
+            <a class="h-link" href="/profile">
+                <button type="submit">Sauvegarder</button> 
+            </a>
+        </form>
+    </div>
+</body>
+</html>

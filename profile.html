@@ -1,0 +1,34 @@
+{{define "profile" }}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil de l'Aventurier</title>
+    <link rel="stylesheet" href="../static/css/profil.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Profil de l'Aventurier</h1>
+        
+        <div id="characterDetails">
+            <!-- Les détails de l'aventurier seront affichés ici -->
+            <p><strong>Nom :</strong> {{.Name}}</p>
+            <p><strong>Classe :</strong> {{.Class}}</p>
+            <p><strong>Age:</strong> {{.Age}}</p>
+            <p><strong>Genre:</strong> {{.Genre}}</p>
+        </div>
+
+        <a class="h-link" href="/create">
+            <button type="submit">Modifier Aventurier</button>
+        </a>
+          
+        
+        <a class="h-link" href="/delete">
+        <button onclick="deleteCharacter()">Supprimer Aventurier</button> 
+        </a>
+        
+    </div>
+</body>
+</html>
+{{end}}

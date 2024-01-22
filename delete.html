@@ -1,0 +1,36 @@
+{{define : "delet"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer un Aventurier</title>
+    <link rel="stylesheet" href="../static/css/delete.css">
+</head>
+<body>
+    <div class="delete-container">
+        <h1>Supprimer un Aventurier</h1>
+        
+        <form action="/delete-adventurer" method="post" class="form-container">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="class">Classe:</label>
+            <input type="text" id="class" name="class" required>
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required> 
+
+        </form>
+        
+        <a class="h-link" href="/index">
+            <button type="submit">retour</button>
+        </a>
+
+    </div>
+</body>
+</html>
+{{end}}
